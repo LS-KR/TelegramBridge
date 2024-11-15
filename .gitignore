@@ -1,0 +1,9 @@
+build/
+dist/
+
+.idea/
+.vscode/
+.vs/
+*.spec
+
+data.py
