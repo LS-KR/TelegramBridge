@@ -4,7 +4,15 @@ import requests
 
 app = Flask(__name__)
 
-from data import CHAT_ID, BOT_TOKEN, BOT_OWNER, host, port
+from config import loadConfig
+
+data = loadConfig()
+BOT_TOKEN = data['BOT_TOKEN']
+CHAT_ID = data['CHAT_ID']
+BOT_OWNER = data['BOT_OWNER']
+
+host = data['host']
+port = data['port']
 
 def tg(message: str):
     print(message)
